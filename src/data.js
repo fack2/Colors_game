@@ -1,4 +1,2 @@
-const data=[
-"red","green","blue","yellow"
-]
+const data = ["red", "green", "blue", "yellow"];
 export default data;

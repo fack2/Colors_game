@@ -8,7 +8,7 @@ class Timer_score extends Component{
 
     }
     componentDidMount(){
-        this.a=setInterval((p)=>{
+        this.a=setInterval(()=>{
             this.setState({time:this.state.time-1})
         },1000)
         
@@ -17,7 +17,7 @@ class Timer_score extends Component{
 render(){
     
     return (
-        // <>
+        
 <div>
 <p>time:{this.state.time}</p> 
 <p>score:{this.state.score}</p> 
@@ -25,7 +25,7 @@ render(){
 
     
 
-// </>
+
 )
     }}
 
