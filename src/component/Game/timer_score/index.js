@@ -7,6 +7,9 @@ class Timer_score extends Component{
         score:0
 
     }
+    componentDidUpdate(){
+        console.log(this.state.time,"444")
+    }
     componentDidMount(){
         this.a=setInterval((p)=>{
             this.setState({time:this.state.time-1})

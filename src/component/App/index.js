@@ -1,22 +1,27 @@
-import React from 'react'
-import colors from "../../data";
-import Timer2 from "../Game/timer_score/index"
+import React, { Component } from "react";
+import Game from "../Game";
+import StartGame from "../startGame";
 
-
-
-const App=()=>{
-
-    return(
-        <>
-        <Timer2/>
-        <h1  style={{color: colors[1]}}
-        >
-        {colors[0]}
-        </h1>
-
-        
-        </>
-    )
+class App extends Component {
+    state={
+        status:-1
+    }
+    setStatus=(newStatus)=>{
+        this.setState({status:newStatus})
+    }
+  render() {
+    return (
+      <>
+      {/* { if (this.state.status===0)
+      <Game a={this.state.a} />
+      else if
+    } */}
+      {this.state.status===0?<Game status={this.setStatus} />:
+     ( this.state.status===-1?<StartGame/>:<p>gameOver</p>)}
+        {/* <Game /> */}
+      </>
+    );
+  }
 }
 
 export default App;
