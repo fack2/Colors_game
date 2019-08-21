@@ -37,7 +37,7 @@ setName=(name)=>{
         ) : this.state.status === -1 ? (
           <StartGame name={this.state.name} setName={this.setName} status={this.setStatus} />
         ) : (
-         <GameOver name={this.state.name} status={this.setStatus} score={this.state.score} resetScore={this.resetScore}/>
+         <GameOver name={this.state.name} status={this.setStatus} score={this.state.score} resetScore={this.resetScore} score={this.state.score}/>
         )}
       </>
     );

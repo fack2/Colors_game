@@ -18,10 +18,12 @@ render(){
     return (
         
 <div>
- <h1>GameOver</h1>
+ <h1 className="headerGameOver">GameOver</h1>
  <h2>Thank you for playing {this.props.name}</h2>
- <button name="repet" onClick={this.over}>Repet</button>
- <button name="playAgain"onClick={this.over}>Play Again</button>
+ <h2>Your score is {this.props.score}</h2>
+ <button className="gameOver" name="repet" onClick={this.over}>Repet</button>
+ <br/>
+ <button className="gameOver" name="playAgain"onClick={this.over}>Play Again</button>
 </div>
 
     
