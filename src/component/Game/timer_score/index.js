@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Timer_score extends Component {
-  componentDidUpdate(e, ee) {
+  componentDidUpdate(e) {
     if (e.score !== this.props.score) {
       this.props.resetTime(10);
     }
