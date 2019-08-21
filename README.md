@@ -2,7 +2,7 @@
 We're creating a game that enables you to playing a color guess game.
 
 ## website 
-[Colors_game]()
+[Colors_game](https://colors-game1.herokuapp.com)
 
 ## User-Journey:
 1. A user should be able to press a (✔) button if the color is true.
