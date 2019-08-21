@@ -1,52 +1,48 @@
-import React,{Component} from 'react'
+import React, { Component } from "react";
 import colors from "../../data";
-import Timer from "../Game/timer_score"
-import Check from "../Game/check"
-import Color from "../Game/color"
+import Timer from "../Game/timer_score";
+import Check from "../Game/check";
+import Color from "../Game/color";
 
-
-class Game extends Component{
-    state={
-        // time:10,
-        // score:0
-
-        
-
-    }
-    componentDidMount(){
-        // console.log(this.props.status(-1),"99999999999")
-        // this.props
-        // this.a=setInterval((p)=>{
-        //     this.setState({time:this.state.time-1})
-        // },1000)
-        
-    }
-    // tic(event){
-    //     const {name}=event.target;
-    //     console.log(name,"0000");
-        
-    // }
-
-render(){
-    
+class Game extends Component {
+  state = {
+    time: 10,
+    colorNo: ((Math.random() * 10) % 4).toString().slice(0, 1),
+    textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
+  };
+  resetTime = newTime => {
+    if (newTime === 10)
+      this.setState({
+        colorNo: ((Math.random() * 10) % 4).toString().slice(0, 1),
+        textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
+      });
+    this.setState({ time: newTime });
+  };
+  getTime = () => {
+    return this.state.time;
+  };
+  render() {
     return (
-        // <>
-        <>
-        <Timer/>
-        <Color colorName= {colors[1]} text={colors[0]}/>
-        <Check/>
-
-        
-        </>
-
-    
-
-// </>
-)
-    }}
-
-
-
-
+      <>
+        <Timer
+          score={this.props.score}
+          resetTime={this.resetTime}
+          getTime={this.getTime}
+        />
+        <Color
+          colorName={colors[this.state.colorNo]}
+          text={colors[this.state.textNo]}
+        />
+        <Check
+          colorName={colors[this.state.colorNo]}
+          text={colors[this.state.textNo]}
+          incScore={this.props.incScore}
+          status={this.props.status}
+          time={this.getTime}
+        />
+      </>
+    );
+  }
+}
 
 export default Game;
