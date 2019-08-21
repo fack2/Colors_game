@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Game from "../Game";
 import StartGame from "../startGame";
+import GameOver from "../GameOver";
 
 class App extends Component {
   state = {
+    name:"",
     status: -1,
     score: 0
   };
@@ -11,10 +13,18 @@ class App extends Component {
     this.setState({ status: newStatus });
   };
   incScore = () => {
-    this.setState(({ score }) => {
+    this.setState(() => {
       return { score: this.state.score + 1 };
     });
   };
+resetScore=()=>{
+  this.setState({score:0})
+}
+setName=(name)=>{
+  this.setState({"name": name})
+
+}
+
   render() {
     return (
       <>
@@ -25,9 +35,9 @@ class App extends Component {
             score={this.state.score}
           />
         ) : this.state.status === -1 ? (
-          <StartGame status={this.setStatus} />
+          <StartGame name={this.state.name} setName={this.setName} status={this.setStatus} />
         ) : (
-          <p>gameOver</p>
+         <GameOver name={this.state.name} status={this.setStatus} score={this.state.score} resetScore={this.resetScore}/>
         )}
       </>
     );
