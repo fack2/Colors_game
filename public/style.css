@@ -1,0 +1,49 @@
+
+body{
+
+    text-align: center;
+}
+.headerGameOver{
+    color:red;
+}
+
+button{
+    border-radius: 20px;
+    padding: 2%;
+    margin-top: 5%;
+    width: 20%;
+    font-size: 130%;
+}
+
+.start{
+    border-radius: 20px;
+    padding: 2%;
+    margin-top: 10%;
+    width: 30%;
+    font-size: 170%;
+
+}
+.gameOver{
+    border-radius: 20px;
+    padding: 2%;
+    margin-top: 10%;
+    width: 50%;
+    font-size: 170%;
+}
+
+input{
+    border-radius: 20px;
+    height: 30px;
+    padding: 2%;
+    font-size: 170%;
+}
+img{
+    
+    height: 18rem;
+}
+
+
+.game{
+    font-size: 200%;
+}
+

@@ -9,11 +9,12 @@ class StartGame extends Component {
   render() {
     return (
       <>
+      <img src="https://img11.androidappsapk.co/300/3/0/1/com.my888studios.freakingcolortext.png"/>
         <h1>Start Game</h1>
         <form>
         <input type="text" onChange={this.onChange} placeholder="Player Name" value={this.props.name}  />
 
-        <button type="submit" onClick={()=>{ this.props.status(0)}}>Start</button>
+        <button className="start" type="submit" onClick={()=>{ this.props.status(0)}}>Start</button>
         </form>
       </>
     );

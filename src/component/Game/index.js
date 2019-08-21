@@ -11,11 +11,16 @@ class Game extends Component {
     textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
   };
   resetTime = newTime => {
-    if (newTime === 10)
+    
+    if (newTime === 10){
+     const x=((Math.random() * 10) % 4).toString().slice(0, 1);
+     const y=((Math.random() * 10) % 4).toString().slice(0, 1);
+      const aa=[x,y];
       this.setState({
-        colorNo: ((Math.random() * 10) % 4).toString().slice(0, 1),
-        textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
+        colorNo:x,
+        textNo:aa[((Math.random() * 10) %2).toString().slice(0, 1)]
       });
+    }
     this.setState({ time: newTime });
   };
   getTime = () => {
@@ -23,7 +28,7 @@ class Game extends Component {
   };
   render() {
     return (
-      <>
+      <div className="game">
         <Timer
           score={this.props.score}
           resetTime={this.resetTime}
@@ -40,7 +45,7 @@ class Game extends Component {
           status={this.props.status}
           time={this.getTime}
         />
-      </>
+      </div>
     );
   }
 }
