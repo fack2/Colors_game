@@ -19,7 +19,7 @@ class StartGame extends Component {
             placeholder="Player Name"
             value={this.props.name}
           />
-
+          <br/>
           <button
             className="start"
             type="submit"
