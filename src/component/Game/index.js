@@ -44,6 +44,7 @@ class Game extends Component {
           status={this.props.status}
           time={this.getTime}
         />
+        <br/>
         <img
           alt="img colors"
           src="https://cdn.dribbble.com/users/935167/screenshots/2896660/project-loader-colors.gif"
