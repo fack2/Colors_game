@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class GameOver extends Component {
 
   over = event => {
-    this.props.resetScore();
     if (event.target.name == "repeat") {
       this.props.status(0);
     } else this.props.status(-1);
