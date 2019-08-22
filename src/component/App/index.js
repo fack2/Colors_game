@@ -5,25 +5,23 @@ import GameOver from "../GameOver";
 
 class App extends Component {
   state = {
-    name:"",
+    name: "",
     status: -1,
     score: 0
   };
   setStatus = newStatus => {
-    this.setState({ status: newStatus });
+    const score = newStatus === 1 ? this.state.score : 0;
+    this.setState({ status: newStatus, score });
   };
   incScore = () => {
     this.setState(() => {
       return { score: this.state.score + 1 };
     });
   };
-resetScore=()=>{
-  this.setState({score:0})
-}
-setName=(name)=>{
-  this.setState({"name": name})
 
-}
+  setName = name => {
+    this.setState({ name: name });
+  };
 
   render() {
     return (
@@ -35,9 +33,17 @@ setName=(name)=>{
             score={this.state.score}
           />
         ) : this.state.status === -1 ? (
-          <StartGame name={this.state.name} setName={this.setName} status={this.setStatus} />
+          <StartGame
+            name={this.state.name}
+            setName={this.setName}
+            status={this.setStatus}
+          />
         ) : (
-         <GameOver name={this.state.name} status={this.setStatus} score={this.state.score} resetScore={this.resetScore} score={this.state.score}/>
+          <GameOver
+            name={this.state.name}
+            status={this.setStatus}
+            score={this.state.score}
+          />
         )}
       </>
     );
