@@ -11,14 +11,13 @@ class Game extends Component {
     textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
   };
   resetTime = newTime => {
-    
-    if (newTime === 10){
-     const x=((Math.random() * 10) % 4).toString().slice(0, 1);
-     const y=((Math.random() * 10) % 4).toString().slice(0, 1);
-      const aa=[x,y];
+    if (newTime === 10) {
+      const x = ((Math.random() * 10) % 4).toString().slice(0, 1);
+      const y = ((Math.random() * 10) % 4).toString().slice(0, 1);
+      const aa = [x, y];
       this.setState({
-        colorNo:x,
-        textNo:aa[((Math.random() * 10) %2).toString().slice(0, 1)]
+        colorNo: x,
+        textNo: aa[((Math.random() * 10) % 2).toString().slice(0, 1)]
       });
     }
     this.setState({ time: newTime });
@@ -44,6 +43,10 @@ class Game extends Component {
           incScore={this.props.incScore}
           status={this.props.status}
           time={this.getTime}
+        />
+        <img
+          alt="img colors"
+          src="https://cdn.dribbble.com/users/935167/screenshots/2896660/project-loader-colors.gif"
         />
       </div>
     );
