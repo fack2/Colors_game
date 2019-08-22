@@ -16,16 +16,12 @@ button{
 }
 
 .start{
-    border-radius: 20px;
-    padding: 2%;
     margin-top: 10%;
     width: 30%;
     font-size: 170%;
 
 }
 .gameOver{
-    border-radius: 20px;
-    padding: 2%;
     margin-top: 10%;
     width: 50%;
     font-size: 170%;
