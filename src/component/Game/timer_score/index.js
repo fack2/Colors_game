@@ -9,7 +9,7 @@ class Timer_score extends Component {
       clearInterval(this.a);
       this.a = setInterval(() => {
         this.props.resetTime(this.props.getTime() - 1);
-      }, 1000 / (this.props.score / 10 + 1));
+      }, 1000 / (this.props.score / 3 + 1));
     }
   }
   componentDidMount() {

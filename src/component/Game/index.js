@@ -3,6 +3,7 @@ import colors from "../../data";
 import Timer from "../Game/timer_score";
 import Check from "../Game/check";
 import Color from "../Game/color";
+import inGame from "../../images/inGame.gif";
 
 class Game extends Component {
   state = {
@@ -27,7 +28,7 @@ class Game extends Component {
   };
   render() {
     return (
-      <div className="game">
+      <div className='game'>
         <Timer
           score={this.props.score}
           resetTime={this.resetTime}
@@ -44,11 +45,8 @@ class Game extends Component {
           status={this.props.status}
           time={this.getTime}
         />
-        <br/>
-        <img
-          alt="img colors"
-          src="https://cdn.dribbble.com/users/935167/screenshots/2896660/project-loader-colors.gif"
-        />
+        <br />
+        <img style={{ marginTop: "-30px" }} alt='img colors' src={inGame} />
       </div>
     );
   }
