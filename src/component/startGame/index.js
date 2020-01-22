@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import startImage from "../../images/start.png";
 class StartGame extends Component {
   onChange = event => {
     this.props.setName(event.target.value);
@@ -7,22 +7,19 @@ class StartGame extends Component {
   render() {
     return (
       <>
-        <img
-          alt="img colors"
-          src="https://img11.androidappsapk.co/300/3/0/1/com.my888studios.freakingcolortext.png"
-        />
+        <img alt='img colors' src={startImage} />
         <h1>Start Game</h1>
         <form>
           <input
-            type="text"
+            type='text'
             onChange={this.onChange}
-            placeholder="Player Name"
+            placeholder='Player Name'
             value={this.props.name}
           />
-          <br/>
+          <br />
           <button
-            className="start"
-            type="submit"
+            className='start'
+            type='submit'
             onClick={() => {
               this.props.status(0);
             }}

@@ -1,45 +1,50 @@
-
-body{
-
-    text-align: center;
+body {
+  text-align: center;
 }
-.headerGameOver{
-    color:red;
+.headerGameOver {
+  color: red;
 }
 
-button{
-    border-radius: 20px;
-    padding: 2%;
+button {
+  border-radius: 20px;
+  padding: 2%;
+  margin-top: 5%;
+  width: 20%;
+  font-size: 130%;
+}
+
+.start {
+  margin-top: 10%;
+  width: 30%;
+  font-size: 170%;
+}
+.gameOver {
+  margin-top: 10%;
+  width: 50%;
+  font-size: 170%;
+}
+
+input {
+  border-radius: 20px;
+  height: 30px;
+  padding: 2%;
+  font-size: 170%;
+}
+img {
+  height: 18rem;
+}
+
+.game {
+  font-size: 200%;
+}
+@media only screen and (min-width: 700px) {
+  button {
+    margin-top: 2%;
+  }
+  .start {
     margin-top: 5%;
-    width: 20%;
-    font-size: 130%;
+  }
+  .gameOver {
+    margin-top: 5%;
+  }
 }
-
-.start{
-    margin-top: 10%;
-    width: 30%;
-    font-size: 170%;
-
-}
-.gameOver{
-    margin-top: 10%;
-    width: 50%;
-    font-size: 170%;
-}
-
-input{
-    border-radius: 20px;
-    height: 30px;
-    padding: 2%;
-    font-size: 170%;
-}
-img{
-    
-    height: 18rem;
-}
-
-
-.game{
-    font-size: 200%;
-}
-
