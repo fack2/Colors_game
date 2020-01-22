@@ -7,7 +7,7 @@ import inGame from "../../images/inGame.gif";
 
 class Game extends Component {
   state = {
-    time: 100,
+    time: 10,
     colorNo: ((Math.random() * 10) % 4).toString().slice(0, 1),
     textNo: ((Math.random() * 10) % 4).toString().slice(0, 1)
   };
