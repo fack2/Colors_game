@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import startImage from "../../images/start.png";
+import startImage from "../../images/start2.png";
 class StartGame extends Component {
   onChange = event => {
     this.props.setName(event.target.value);
